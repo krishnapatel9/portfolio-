@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-text font-body;
+    line-height: 1.6;
+  }
+
+  /* Focus outline styles for accessibility */
+  *:focus-visible {
+    outline: 2px solid theme('colors.accent');
+    outline-offset: 4px;
+  }
+}
+
+@layer utilities {
+  .role-line .cursor {
+    display: inline-block;
+    width: 8px;
+    height: 15px;
+    background: theme('colors.accent');
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+    vertical-align: middle;
+  }
+  
+  .glass-panel {
+    background: theme('colors.panel');
+    border: 1px solid theme('colors.panel-border');
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Reduced Motion Fallback */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+
+  .role-line .cursor {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+}

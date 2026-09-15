@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krishna Patel — Backend Engineer & AI-Native Developer</title>
+  <meta name="description"
+    content="Krishna Patel - Backend Engineer & AI-Native Developer specializing in Node.js, Python, TypeScript, and AI agent orchestration pipelines. Parul University 2026 Grad.">
+  <meta name="keywords"
+    content="Krishna Patel, Software Developer, Backend Engineer, AI/ML, Node.js, Python, TypeScript, Parul University">
+  <!-- SEO & JSON-LD -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="canonical" href="https://your-domain.com">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    "name": "Krishna Patel",
+    "url": "https://your-domain.com",
+    "jobTitle": "Backend & AI-Native Developer",
+    "sameAs": [
+      "https://github.com/krishnapatel9",
+      "https://www.linkedin.com/in/krishna-patel-232544282/"
+    ]
+  }
+  </script>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-domain.com">
+  <meta property="og:title" content="Krishna Patel — Software Developer Portfolio">
+  <meta property="og:description"
+    content="I build backend services and AI-native systems — Node.js/TypeScript APIs, Python automation, and agent orchestration pipelines that ship to production.">
+  <meta property="og:image" content="https://your-domain.com/og-image.jpg">
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://your-domain.com">
+  <meta property="twitter:title" content="Krishna Patel — Software Developer Portfolio">
+  <meta property="twitter:description"
+    content="I build backend services and AI-native systems — Node.js/TypeScript APIs, Python automation, and agent orchestration pipelines that ship to production.">
+  <meta property="twitter:image" content="https://your-domain.com/og-image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0A0E11;
+      --panel: #10151A;
+      --panel-border: #1E262D;
+      --text: #E8EDF0;
+      --text-dim: #8B98A3;
+      --text-faint: #556069;
+      --accent: #22D3EE;
+      --accent-dim: #0E5A66;
+      --accent-glow: rgba(34, 211, 238, 0.12);
+      --green: #4ADE80;
+      --disp: 'Space Grotesk', sans-serif;
+      --body: 'Inter', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--body);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+      }
+
+      .dot {
+        animation: none !important;
+        opacity: 1 !important;
+      }
+
+      .role-line .cursor {
+        animation: none !important;
+        opacity: 0 !important;
+      }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: #0A0E11;
+    }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    @media(max-width:640px) {
+      .wrap {
+        padding: 0 20px;
+      }
+    }
+
+    /* ---------- NAV ---------- */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 14, 17, 0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--panel-border);
+    }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 18px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: var(--mono);
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--text);
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--text-dim);
+      text-transform: lowercase;
+      letter-spacing: 0.3px;
+      transition: color 0.2s;
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a.active {
+      color: var(--accent);
+    }
+
+    .hire-btn {
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 600;
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 9px 18px;
+      border-radius: 2px;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .hire-btn:hover {
+      background: var(--accent);
+      color: #0A0E11;
+    }
+
+    /* Focus outline styles for accessibility */
+    *:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: var(--text);
+      cursor: pointer;
+      padding: 6px;
+      border-radius: 4px;
+      z-index: 101;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+
+    .mobile-toggle:hover {
+      background: var(--panel-border);
+    }
+
+    .mobile-toggle.active svg {
+      transform: rotate(90deg);
+    }
+
+    @media(max-width:800px) {
+      .mobile-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--panel);
+        border-bottom: 1px solid var(--panel-border);
+        padding: 24px 32px;
+        gap: 20px;
+        z-index: 99;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+    }
+
+    /* Projects section card element stylings */
+    .proj-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--green);
+      border: 1px solid rgba(74, 222, 128, 0.2);
+      background: rgba(74, 222, 128, 0.05);
+      padding: 3px 8px;
+      border-radius: 12px;
+    }
+
+    .proj-status .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--green);
+      border-radius: 50%;
+      margin: 0;
+    }
+
+    .proj-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-dim);
+      border: 1px solid var(--panel-border);
+      padding: 6px 14px;
+      border-radius: 4px;
+      background: #0d1216;
+      transition: all 0.2s;
+    }
+
+    .proj-link-btn:hover {
+      color: var(--accent);
+      border-color: var(--accent-dim);
+      background: rgba(34, 211, 238, 0.02);
+    }
+
+    .proj-link-btn svg {
+      width: 14px;
+      height: 14px;
+      stroke-width: 2px;
+    }
+
+    /* Extra media queries for small layouts */
+    @media(max-width:480px) {
+      .nav-inner {
+        padding: 14px 20px;
+      }
+
+      .logo {
+        font-size: 14px;
+      }
+
+      .hire-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+      }
+    }
+
+
+
+    /* ---------- HERO ---------- */
+    .hero {
+      padding: 100px 0 80px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    @media(max-width:900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 60px 0 50px;
+      }
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--green);
+      border: 1px solid rgba(74, 222, 128, 0.3);
+      background: rgba(74, 222, 128, 0.06);
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 28px;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.3;
+      }
+    }
+
+    h1.name {
+      font-family: var(--disp);
+      font-weight: 700;
+      font-size: clamp(40px, 6vw, 68px);
+      line-height: 1.02;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
+
+    .role-line {
+      font-family: var(--mono);
+      font-size: 18px;
+      color: var(--accent);
+      margin-bottom: 22px;
+      min-height: 26px;
+    }
+
+    .role-line .cursor {
+      display: inline-block;
+      width: 9px;
+      height: 18px;
+      background: var(--accent);
+      margin-left: 2px;
+      vertical-align: middle;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      50% {
+        opacity: 1;
+      }
+
+      51%,
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .hero p.desc {
+      font-size: 16px;
+      color: var(--text-dim);
+      max-width: 480px;
+      margin-bottom: 36px;
+    }
+
+    .hero p.desc b {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      font-family: var(--mono);
+      font-weight: 600;
+      font-size: 13px;
+      background: var(--accent);
+      color: #0A0E11;
+      padding: 13px 24px;
+      border-radius: 2px;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px var(--accent-glow);
+    }
+
+    .btn-secondary {
+      font-family: var(--mono);
+      font-weight: 600;
+      font-size: 13px;
+      background: transparent;
+      color: var(--text);
+      padding: 13px 24px;
+      border: 1px solid var(--panel-border);
+      border-radius: 2px;
+      transition: border-color 0.15s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--text-dim);
+    }
+
+    .social-row {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .social-row a {
+      color: var(--text-faint);
+      font-family: var(--mono);
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .social-row a:hover {
+      color: var(--accent);
+    }
+
+    .social-row .sep {
+      color: var(--panel-border);
+    }
+
+    /* terminal card */
+    .terminal {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .term-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      background: #0D1216;
+      border-bottom: 1px solid var(--panel-border);
+    }
+
+    .term-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .term-bar span:nth-child(1) {
+      background: #FF5F56;
+    }
+
+    .term-bar span:nth-child(2) {
+      background: #FFBD2E;
+    }
+
+    .term-bar span:nth-child(3) {
+      background: #27C93F;
+    }
+
+    .term-title {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-faint);
+      margin-left: 8px;
+    }
+
+    .term-body {
+      padding: 22px;
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .term-body .prompt {
+      color: var(--green);
+    }
+
+    .term-body .cmd {
+      color: var(--text);
+    }
+
+    .term-body .out-key {
+      color: var(--text-faint);
+    }
+
+    .term-body .out-val {
+      color: var(--accent);
+    }
+
+    .term-body .out-val2 {
+      color: var(--text);
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--accent);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .eyebrow::before {
+      content: '';
+      width: 22px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    h2.section-title {
+      font-family: var(--disp);
+      font-weight: 700;
+      font-size: clamp(30px, 4vw, 44px);
+      letter-spacing: -1px;
+      margin-bottom: 14px;
+    }
+
+    .section-sub {
+      color: var(--text-dim);
+      max-width: 560px;
+      margin-bottom: 50px;
+      font-size: 15px;
+    }
+
+    /* ---------- EXPERIENCE ---------- */
+    .exp-item {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 32px;
+      padding: 32px 0;
+      border-top: 1px solid var(--panel-border);
+    }
+
+    .exp-item:last-child {
+      border-bottom: 1px solid var(--panel-border);
+    }
+
+    @media(max-width:700px) {
+      .exp-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+    }
+
+    .exp-date {
+      font-family: var(--mono);
+      font-size: 12.5px;
+      color: var(--text-faint);
+      padding-top: 3px;
+    }
+
+    .exp-role {
+      font-family: var(--disp);
+      font-weight: 600;
+      font-size: 19px;
+      margin-bottom: 2px;
+    }
+
+    .exp-company {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--accent);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .exp-company .loc {
+      color: var(--text-faint);
+      font-size: 11px;
+      border: 1px solid var(--panel-border);
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+
+    .exp-item ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .exp-item li {
+      font-size: 14.5px;
+      color: var(--text-dim);
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .exp-item li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent-dim);
+      font-size: 13px;
+    }
+
+    /* ---------- PROJECTS ---------- */
+    .proj-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .proj-card {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 8px;
+      padding: 30px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .proj-card:hover {
+      border-color: var(--accent-dim);
+      transform: translateY(-3px);
+    }
+
+    .proj-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .proj-name {
+      font-family: var(--disp);
+      font-weight: 600;
+      font-size: 19px;
+    }
+
+    .proj-link {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-faint);
+      border: 1px solid var(--panel-border);
+      padding: 5px 12px;
+      border-radius: 20px;
+      transition: all 0.2s;
+    }
+
+    .proj-link:hover {
+      color: var(--accent);
+      border-color: var(--accent-dim);
+    }
+
+    .proj-desc {
+      color: var(--text-dim);
+      font-size: 14.5px;
+      margin: 14px 0 18px;
+      max-width: 720px;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: var(--text-dim);
+      background: #0D1216;
+      border: 1px solid var(--panel-border);
+      padding: 5px 11px;
+      border-radius: 4px;
+    }
+
+    /* ---------- STACK ---------- */
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    @media(max-width:800px) {
+      .stack-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width:560px) {
+      .stack-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .stack-card {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 8px;
+      padding: 24px;
+    }
+
+    .stack-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      font-family: var(--mono);
+      font-size: 12.5px;
+      color: var(--text);
+      letter-spacing: 0.5px;
+    }
+
+    .stack-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 6px;
+      background: var(--accent-glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 14px;
+    }
+
+    .stack-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .stack-items span {
+      font-family: var(--mono);
+      font-size: 11.5px;
+      color: var(--text-dim);
+      background: #0D1216;
+      padding: 5px 10px;
+      border-radius: 4px;
+      border: 1px solid var(--panel-border);
+    }
+
+    /* ---------- ABOUT ---------- */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 50px;
+    }
+
+    @media(max-width:800px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .about-text p {
+      color: var(--text-dim);
+      font-size: 15.5px;
+      margin-bottom: 18px;
+      max-width: 520px;
+    }
+
+    .about-text b {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .about-text .accent-text {
+      color: var(--accent);
+    }
+
+    .edu-box {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 8px;
+      padding: 24px;
+      margin-top: 8px;
+    }
+
+    .edu-box .label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-faint);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .edu-box .school {
+      font-family: var(--disp);
+      font-weight: 600;
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+
+    .edu-box .deg {
+      color: var(--text-dim);
+      font-size: 13.5px;
+    }
+
+    .fact-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .fact-card {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .fact-title {
+      font-family: var(--disp);
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 6px;
+      color: var(--accent);
+    }
+
+    .fact-desc {
+      font-size: 13.5px;
+      color: var(--text-dim);
+    }
+
+    /* ---------- CONTACT ---------- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media(max-width:700px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 8px;
+      padding: 20px;
+      transition: border-color 0.2s;
+    }
+
+    .contact-item:hover {
+      border-color: var(--accent-dim);
+    }
+
+    .c-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      background: var(--accent-glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .c-label {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      color: var(--text-faint);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .c-value {
+      font-size: 14.5px;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .avail-box {
+      grid-column: 1 / -1;
+      margin-top: 6px;
+      background: linear-gradient(135deg, rgba(255, 179, 0, 0.08), transparent);
+      border: 1px solid var(--accent-dim);
+      border-radius: 8px;
+      padding: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .avail-box div .t {
+      font-family: var(--disp);
+      font-weight: 600;
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+
+    .avail-box div .s {
+      font-size: 13.5px;
+      color: var(--text-dim);
+    }
+
+    footer {
+      border-top: 1px solid var(--panel-border);
+      padding: 28px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    footer .fname {
+      font-family: var(--mono);
+      font-size: 12.5px;
+      color: var(--text-faint);
+    }
+
+    footer .fname span {
+      color: var(--accent);
+    }
+
+    footer .flinks {
+      display: flex;
+      gap: 18px;
+    }
+
+    footer .flinks a {
+      color: var(--text-faint);
+      font-size: 12.5px;
+      font-family: var(--mono);
+      transition: color 0.2s;
+    }
+
+    footer .flinks a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <nav>
+    <div class="nav-inner">
+      <a href="#top" style="text-decoration:none;"><div class="logo">KP<span>.</span>dev</div></a>
+      <ul class="nav-links">
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#stack">stack</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+      <a href="#contact"><button class="hire-btn">Hire Me</button></a>
+      <button class="mobile-toggle" aria-label="Toggle navigation menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="wrap">
+
+    <!-- HERO -->
+    <section class="hero" style="padding-top:70px;">
+      <div>
+        <div class="status-pill" style="margin-bottom:12px;"><span class="dot"></span> Open to work — available immediately</div>
+        <h1 class="name">Krishna<br>Patel</h1>
+        <div class="role-line" id="roleLine">Backend Engineer<span class="cursor"></span></div>
+        <p class="desc">I turn <b>AI prototypes into systems that survive production traffic.</b></p>
+        <div style="font-family:var(--mono); font-size:12px; color:var(--text-faint); margin-bottom:28px;">
+          <span style="color:var(--accent);">3</span> internships &middot; <span style="color:var(--accent);">5</span> shipped systems &middot; <span style="color:var(--accent);">8.21</span> CPI
+        </div>
+        <div class="cta-row">
+          <a href="#projects"><button class="btn-primary">View Projects</button></a>
+          <a href="#contact"><button class="btn-secondary">Get In Touch</button></a>
+        </div>
+        <div class="social-row">
+          <a href="https://github.com/krishnapatel9" target="_blank"
+            style="display:inline-flex; align-items:center; gap:6px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              style="pointer-events:none;">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
+            github.com/krishnapatel9
+          </a>
+          <span class="sep">|</span>
+          <a href="https://www.linkedin.com/in/krishna-patel-232544282/" target="_blank"
+            style="display:inline-flex; align-items:center; gap:6px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              style="pointer-events:none;">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            LinkedIn
+          </a>
+          <span class="sep">|</span>
+          <a href="mailto:krishna.patel092004@gmail.com" style="display:inline-flex; align-items:center; gap:6px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              style="pointer-events:none;">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            email
+          </a>
+          <span class="sep">|</span>
+          <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap; font-family:var(--mono); font-size:13px; color:var(--text-faint);">
+            Resumes:
+            <a href="./Krishna_fsd.pdf" download="Krishna_Patel_FullStack_Resume.pdf" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:4px; color:inherit;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="pointer-events:none;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Full Stack
+            </a>
+            <span class="sep">·</span>
+            <a href="./kp_resume.pdf" download="Krishna_Patel_SDE_Resume.pdf" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:4px; color:inherit;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="pointer-events:none;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              SDE
+            </a>
+            <span class="sep">·</span>
+            <a href="./AI_KP.pdf" download="Krishna_Patel_AI_Resume.pdf" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:4px; color:inherit;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="pointer-events:none;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              AI Developer
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="terminal">
+        <div class="term-bar">
+          <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+          <span class="term-title">whoami.sh</span>
+        </div>
+        <div class="term-body">
+          <div><span class="prompt">$</span> <span class="cmd">whoami</span></div>
+          <div style="margin-bottom:14px;"><span class="out-val2">krishna_patel</span></div>
+          <div><span class="prompt">$</span> <span class="cmd">cat education.txt</span></div>
+          <div style="margin-bottom:14px;">
+            <span class="out-key">university:</span> <span class="out-val2">Parul University</span><br>
+            <span class="out-key">degree:</span> <span class="out-val2">B.Tech CSE</span><br>
+            <span class="out-key">cpi:</span> <span class="out-val">8.21</span> &nbsp;<span class="out-key">grad:</span>
+            <span class="out-val2">2026</span>
+          </div>
+          <div><span class="prompt">$</span> <span class="cmd">cat focus.txt</span></div>
+          <div>
+            <span class="out-key">backend:</span> <span class="out-val2">Node.js · TypeScript · FastAPI</span><br>
+            <span class="out-key">ai:</span> <span class="out-val2">RAG · Agents · Vector DBs</span><br>
+            <span class="out-key">devops:</span> <span class="out-val2">Docker · GitLab CI/CD · AWS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="eyebrow">Work History</div>
+      <h2 class="section-title">Experience</h2>
+      <p class="section-sub">Hands-on internships across AI/ML engineering, backend infrastructure, and enterprise
+        integrations.</p>
+
+      <div class="exp-item">
+        <div class="exp-date">Jan 2026 — Jun 2026</div>
+        <div>
+          <div class="exp-role">AI/ML Intern</div>
+          <div class="exp-company">MyOnsiteHealthcare <span class="loc">Onsite</span></div>
+          <ul>
+            <li>Implemented AI agent orchestration, automated workflows, REST APIs, and integrated third-party enterprise systems.</li>
+            <li>Developed operational, governance, billing, and administrative workflows for a production-scale enterprise platform.</li>
+            <li>Configured Keycloak SSO/RBAC, Vault-based secret management, and real-time data integration.</li>
+            <li>Engineered GitLab CI/CD pipelines using self-hosted runners, SSH-based deployments, and secure environment variable management.</li>
+            <li>Developed scalable programmatic SEO workflows addressing content quality, pagination, and search ranking optimization.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date">Jul 2025 — Dec 2025</div>
+        <div>
+          <div class="exp-role">AI/ML Intern</div>
+          <div class="exp-company">Joflee <span class="loc">Remote</span></div>
+          <ul>
+            <li>Applied machine learning to real-world projects, focusing on data preprocessing, feature engineering, and model evaluation.</li>
+            <li>Conducted experiments using TensorFlow, PyTorch, and Scikit-learn to build, test, and optimize predictive models.</li>
+            <li>Integrated ML components into end-to-end ML workflows and software applications, utilizing version control and rigorous code review.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="eyebrow">Shipped Work</div>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">Full-stack systems and AI tooling built end-to-end — from data pipeline to deployed
+        interface.</p>
+
+      <div class="proj-grid">
+        <div class="proj-card">
+          <div class="proj-head">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="proj-name">LeadForge — AI-Powered Lead Generation Platform</div>
+              <span class="proj-status"><span class="dot"></span>Shipped</span>
+            </div>
+            <div style="display:flex; gap:8px;">
+              <a class="proj-link-btn" href="https://github.com/krishnapatel9/LeadForge" target="_blank" aria-label="LeadForge GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a class="proj-link-btn" href="https://lead-forge-azure.vercel.app/" target="_blank" aria-label="LeadForge Live">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </div>
+          <div class="proj-desc"><b>AI-powered lead generation platform.</b> Features AI prompt workflows for lead research and scoring, async SQLAlchemy operations, REST APIs, and a Kanban pipeline. Automatically generates lead intelligence and personalized outreach drafts.</div>
+          <div class="tag-row">
+            <span class="tag">FastAPI</span><span class="tag">Python</span><span class="tag">Next.js</span><span class="tag">PostgreSQL</span><span class="tag">SQLAlchemy</span><span class="tag">Docker</span><span class="tag">AI Agents</span>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-head">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="proj-name">Ride Rescue — Motor Mechanic Web App</div>
+              <span class="proj-status"><span class="dot"></span>Shipped</span>
+            </div>
+            <a class="proj-link-btn" href="https://ride-rescue-updated.vercel.app/" target="_blank" aria-label="Ride Rescue Live">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              <span>Live Demo</span>
+            </a>
+          </div>
+          <div class="proj-desc"><b>Full-stack responsive web application connecting users with verified motor mechanics for real-time roadside assistance.</b> Built with Supabase authentication, real-time location tracking, and transparent pricing.</div>
+          <div class="tag-row">
+            <span class="tag">React</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span><span class="tag">Supabase</span>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-head">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="proj-name">Compliance Document Tracker</div>
+              <span class="proj-status"><span class="dot"></span>Shipped</span>
+            </div>
+            <a class="proj-link-btn" href="https://github.com/krishnapatel9/compliancedocumenttracker" target="_blank"
+              aria-label="Compliance Document Tracker GitHub Repository">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+          <div class="proj-desc"><b>Full-stack compliance document management system.</b> Features PDF uploads, secure JWT authentication, comprehensive RESTful APIs with API documentation, SQL analytics dashboards, automated email reminders via cron scheduling, and Docker deployment.</div>
+          <div class="tag-row">
+            <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Express</span>
+            <span class="tag">PostgreSQL</span><span class="tag">Prisma</span><span class="tag">Docker</span><span
+              class="tag">JWT</span>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-head">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="proj-name">AI Multimodal Video Captioning Tool</div>
+              <span class="proj-status"><span class="dot"></span>Shipped</span>
+            </div>
+            <a class="proj-link-btn" href="https://github.com/krishnapatel9/multimodalvideocaptions" target="_blank"
+              aria-label="AI Multimodal Video Captioning Tool GitHub Repository">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+          <div class="proj-desc"><b>Full-stack Gradio app automating audio/video analysis.</b> Architecture:<br>
+            • <b>Audio → Whisper →</b> Transcript<br>
+            • <b>Video Frames → BLIP / YOLOv8 →</b> Scene Understanding<br>
+            • <b>LLM →</b> Caption Generation<br>
+            • <b>Evaluation →</b> SNR + Blur + Readability</div>
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">Gradio</span><span class="tag">Whisper</span>
+            <span class="tag">BLIP</span><span class="tag">YOLOv8</span><span class="tag">HuggingFace</span>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-head">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="proj-name">AI-Powered Productivity Chrome Extension</div>
+              <span class="proj-status"><span class="dot"></span>Shipped</span>
+            </div>
+            <a class="proj-link-btn" href="https://github.com/krishnapatel9" target="_blank"
+              aria-label="AI-Powered Productivity Chrome Extension GitHub Profile">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+          <div class="proj-desc"><b>Chrome extension providing interactive browser experiences.</b> Features LLM-based content processing via the Perplexity AI API for intelligent, timestamp-linked insights and summaries. Utilizes API-driven automation workflows alongside browser extension APIs.</div>
+          <div class="tag-row">
+            <span class="tag">JavaScript</span><span class="tag">Perplexity AI API</span><span class="tag">Chrome Extension APIs</span><span class="tag">LLMs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section id="stack">
+      <div class="eyebrow">Technical Stack</div>
+      <h2 class="section-title">What I Work With</h2>
+      <p class="section-sub">Tools and technologies across backend engineering, AI development, and infrastructure.</p>
+
+      <div class="stack-grid">
+        <div class="stack-card">
+          <div class="stack-head"><span class="stack-icon">◆</span> LANGUAGES</div>
+          <div class="stack-items">
+            <span>Python</span><span>TypeScript</span><span>JavaScript</span><span>Java</span><span>C</span><span>SQL</span>
+          </div>
+        </div>
+        <div class="stack-card">
+          <div class="stack-head"><span class="stack-icon">❖</span> FRONTEND</div>
+          <div class="stack-items">
+            <span>React.js</span><span>Next.js</span><span>Vite</span><span>Tailwind CSS</span><span>Supabase</span>
+          </div>
+        </div>
+        <div class="stack-card">
+          <div class="stack-head"><span class="stack-icon">▤</span> BACKEND & APIs</div>
+          <div class="stack-items">
+            <span>Node.js</span><span>FastAPI</span><span>Express.js</span><span>REST APIs</span><span>WebSockets</span><span>API Integrations</span>
+          </div>
+        </div>
+        <div class="stack-card">
+          <div class="stack-head"><span class="stack-icon">✦</span> AI / GENERATIVE AI</div>
+          <div class="stack-items">
+            <span>LLMs</span><span>Generative AI</span><span>Prompt Engineering</span><span>AI Agent Orchestration</span><span>RAG</span><span>Conversational AI</span><span>AI Workflows</span><span>Hugging Face</span>
+          </div>
+        </div>
+        <div class="stack-card">
+          <div class="stack-head"><span class="stack-icon">🧠</span> MACHINE LEARNING</div>
+          <div class="stack-items">
+            <span>PyTorch</span><span>TensorFlow</span><span>Scikit-learn</span><span>NLP</span><span>Computer Vision</span><span>Feature Engineering</span><span>Model Evaluation</span>
+          </div>
+        </div>
+        <div class="stack-card">
+          <div class="stack-head"><span class="stack-icon">▦</span> DATABASES</div>
+          <div class="stack-items">
+            <span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>Redis</span><span>Chroma</span><span>SQLAlchemy</span><span>Prisma</span>
+          </div>
+        </div>
+        <div class="stack-card">
+          <div class="stack-head"><span class="stack-icon">☁</span> CLOUD / DEVOPS</div>
+          <div class="stack-items">
+            <span>AWS</span><span>Docker</span><span>Git</span><span>GitLab CI/CD</span><span>Self-hosted Runners</span><span>SSH Deployments</span>
+          </div>
+        </div>
+        <div class="stack-card">
+          <div class="stack-head"><span class="stack-icon">🛡️</span> SECURITY / ENTERPRISE</div>
+          <div class="stack-items">
+            <span>JWT</span><span>Keycloak</span><span>SSO</span><span>RBAC</span><span>Vault</span><span>Secure API Integrations</span>
+          </div>
+        </div>
+        <div class="stack-card">
+          <div class="stack-head"><span class="stack-icon">⚙️</span> AUTOMATION</div>
+          <div class="stack-items">
+            <span>Workflow Automation</span><span>Cron Jobs</span><span>Programmatic SEO</span><span>Third-party Integrations</span><span>Enterprise Integrations</span>
+          </div>
+        </div>
+        <div class="stack-card">
+          <div class="stack-head"><span class="stack-icon">✎</span> CERTIFICATIONS</div>
+          <div class="stack-items">
+            <span>AWS (Cloud Foundations)</span><span>Infosys (Database and SQL)</span><span>DeepLearning.AI (ChatGPT Prompt Engineering)</span><span>HackerRank (Problem Solving)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="eyebrow">How I Work</div>
+      <h2 class="section-title">About Me</h2>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Final-year <b>Computer Science</b> student at <b>Parul University</b> (CPI 8.21, graduating 2026), working
+            at the intersection of <span class="accent-text">backend engineering and AI-native development</span>.</p>
+          <p>I've shipped <b>GitLab CI/CD pipelines with self-hosted runners</b> in production, built <b>AI agent
+              orchestration</b> for an enterprise operations platform, and developed multimodal AI tools combining
+            speech, vision, and language models end-to-end.</p>
+          <p>I lean on AI coding assistants to prototype fast without cutting corners — comfortable picking up new tools
+            quickly in cross-functional, fast-paced teams.</p>
+
+          <div class="edu-box">
+            <div class="label">Education</div>
+            <div class="school">Parul University, Vadodara</div>
+            <div class="deg">B.Tech, Computer Science Engineering · CPI 8.21 · 2022–2026</div>
+          </div>
+        </div>
+
+        <div class="fact-cards">
+          <div class="fact-card">
+            <div class="fact-title">Ships in production</div>
+            <div class="fact-desc">CI/CD pipelines, SSO, and agent orchestration built for a live enterprise operations platform — not demos.</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-title">AI-native workflow</div>
+            <div class="fact-desc">Uses AI coding assistants to prototype quickly while keeping code quality and scalability intact.</div>
+          </div>
+          <div class="fact-card">
+            <div class="fact-title">Full-stack range</div>
+            <div class="fact-desc">Comfortable from Node.js/TypeScript APIs down to Python ML pipelines and infra automation.</div>
+          </div>
+          <div class="fact-card" style="border-color: var(--accent-dim); background: rgba(34, 211, 238, 0.02);">
+            <div class="fact-title" style="display: flex; align-items: center; gap: 8px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              Leadership & Hackathons
+            </div>
+            <div class="fact-desc">
+              <ul style="list-style: none; padding-left: 0; display: flex; flex-direction: column; gap: 6px; margin-top: 8px;">
+                <li style="position: relative; padding-left: 14px;"><span style="position: absolute; left: 0; color: var(--accent-dim);">▸</span> Anchor — CDC (Career Development Cell)</li>
+                <li style="position: relative; padding-left: 14px;"><span style="position: absolute; left: 0; color: var(--accent-dim);">▸</span> Team Technical — PU AI Society</li>
+                <li style="position: relative; padding-left: 14px;"><span style="position: absolute; left: 0; color: var(--accent-dim);">▸</span> Team Finance — PU Projections '24</li>
+                <li style="position: relative; padding-left: 14px;"><span style="position: absolute; left: 0; color: var(--accent-dim);">▸</span> Hackathon: PUCodeHackathon 2.0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="eyebrow">Let's Talk</div>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-sub">Open to Software Development, Backend Engineering, and AI/ML roles. Let's build something
+        reliable.</p>
+
+      <div class="contact-grid">
+        <a class="contact-item" href="mailto:krishna.patel092004@gmail.com">
+          <div class="c-icon">
+            <svg class="contact-svg-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              style="pointer-events:none;">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <div>
+            <div class="c-label">Email</div>
+            <div class="c-value">krishna.patel092004@gmail.com</div>
+          </div>
+        </a>
+        <a class="contact-item" href="https://github.com/krishnapatel9" target="_blank">
+          <div class="c-icon">
+            <svg class="contact-svg-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              style="pointer-events:none;">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
+          </div>
+          <div>
+            <div class="c-label">GitHub</div>
+            <div class="c-value">@krishnapatel9</div>
+          </div>
+        </a>
+        <a class="contact-item" href="https://www.linkedin.com/in/krishna-patel-232544282/" target="_blank">
+          <div class="c-icon">
+            <svg class="contact-svg-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              style="pointer-events:none;">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </div>
+          <div>
+            <div class="c-label">LinkedIn</div>
+            <div class="c-value">/in/krishna-patel-232544282</div>
+          </div>
+        </a>
+        <a class="contact-item" href="tel:+919773039990">
+          <div class="c-icon">
+            <svg class="contact-svg-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              style="pointer-events:none;">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+          </div>
+          <div>
+            <div class="c-label">Phone</div>
+            <div class="c-value">+91-9773039990</div>
+          </div>
+        </a>
+
+        <div class="avail-box">
+          <div>
+            <div class="t">India — Open to Remote / Onsite</div>
+            <div class="s">Comfortable across timezones and fast-paced, cross-functional teams.</div>
+          </div>
+          <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:12px;">
+            <a href="./Krishna_fsd.pdf" download="Krishna_Patel_FullStack_Resume.pdf" target="_blank" rel="noopener">
+              <button class="btn-secondary" style="display:flex; align-items:center; gap:8px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Full Stack CV
+              </button>
+            </a>
+            <a href="./kp_resume.pdf" download="Krishna_Patel_SDE_Resume.pdf" target="_blank" rel="noopener">
+              <button class="btn-secondary" style="display:flex; align-items:center; gap:8px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                SDE CV
+              </button>
+            </a>
+            <a href="./AI_KP.pdf" download="Krishna_Patel_AI_Resume.pdf" target="_blank" rel="noopener">
+              <button class="btn-secondary" style="display:flex; align-items:center; gap:8px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                AI CV
+              </button>
+            </a>
+            <a href="mailto:krishna.patel092004@gmail.com"><button class="btn-primary">Say Hello</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="fname">Built by <span>Krishna Patel</span></div>
+      <div class="flinks">
+        <a href="#top" style="margin-right:12px;">Back to top &uarr;</a>
+        <a href="https://github.com/krishnapatel9" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/krishna-patel-232544282/" target="_blank">LinkedIn</a>
+        <a href="mailto:krishna.patel092004@gmail.com">Email</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // typing role rotation
+    const roles = ["Backend Engineer", "AI-Native Developer", "Software Developer"];
+    const el = document.getElementById('roleLine');
+    let ri = 0, ci = 0, deleting = false;
+
+    // Check for prefers-reduced-motion to disable typewriter animation
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    function tick() {
+      if (motionQuery.matches) {
+        el.innerHTML = "Backend Engineer &middot; AI-Native Developer &middot; Software Developer";
+        return; // halt typed animation
+      }
+
+      const current = roles[ri];
+      if (!deleting) {
+        ci++;
+        if (ci > current.length) { deleting = true; setTimeout(tick, 1400); return; }
+      } else {
+        ci--;
+        if (ci < 0) { deleting = false; ri = (ri + 1) % roles.length; ci = 0; }
+      }
+      el.innerHTML = current.slice(0, ci) + '<span class="cursor"></span>';
+      setTimeout(tick, deleting ? 35 : 65);
+    }
+
+    // Start typewriter if motion is allowed
+    if (!motionQuery.matches) {
+      tick();
+    } else {
+      el.innerHTML = "Backend Engineer &middot; AI-Native Developer &middot; Software Developer";
+    }
+
+    // Listen for changes in OS motion preference
+    motionQuery.addEventListener('change', () => {
+      if (motionQuery.matches) {
+        el.innerHTML = "Backend Engineer &middot; AI-Native Developer &middot; Software Developer";
+      } else {
+        ri = 0; ci = 0; deleting = false;
+        tick();
+      }
+    });
+
+    // active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        const rect = s.getBoundingClientRect();
+        if (rect.top <= 120 && rect.bottom >= 120) current = s.id;
+      });
+      navLinks.forEach(l => {
+        l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+      });
+    });
+
+    // mobile nav hamburger toggle functionality
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navLinksList = document.querySelector('.nav-links');
+    if (mobileToggle && navLinksList) {
+      mobileToggle.addEventListener('click', () => {
+        const isActive = navLinksList.classList.toggle('active');
+        mobileToggle.classList.toggle('active');
+        mobileToggle.setAttribute('aria-expanded', isActive);
+        mobileToggle.innerHTML = isActive
+          ? `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`
+          : `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
+      });
+
+      // Close menu when a link inside it is clicked
+      navLinksList.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinksList.classList.remove('active');
+          mobileToggle.classList.remove('active');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+          mobileToggle.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
+        });
+      });
+    }
+  </script>
+
+</body>
+
+</html>
